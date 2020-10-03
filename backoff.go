@@ -24,6 +24,10 @@ func New(initial uint64, current uint64, max uint64, algo func(uint64) uint64) (
 	}
 
 	if algo == nil {
+		if initial != current || current != max {
+			return nil, errors.New("initial, current, and max must be equal for flat backoff")
+		}
+
 		algo = func(current uint64) uint64 {
 			return current
 		}

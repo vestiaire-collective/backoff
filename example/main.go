@@ -25,7 +25,7 @@ func main() {
 		panic(err)
 	}
 
-	flatBO, err := backoff.New(initial, initial, max, nil)
+	flatBO, err := backoff.New(initial, initial, initial, nil)
 
 	if err != nil {
 		panic(err)
