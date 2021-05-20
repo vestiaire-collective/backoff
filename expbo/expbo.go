@@ -1,8 +1,9 @@
 package expbo
 
 import (
-	"github.com/chaseisabelle/backoff"
 	"math"
+
+	"github.com/vestiaire-collective/backoff"
 )
 
 func New(initial uint64, max uint64, exp uint64) (*backoff.Backoff, error) {
