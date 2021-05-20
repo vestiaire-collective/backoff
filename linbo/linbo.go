@@ -1,7 +1,7 @@
 package linbo
 
 import (
-	"github.com/chaseisabelle/backoff"
+	"github.com/vestiaire-collective/backoff"
 )
 
 func New(initial uint64, max uint64, inc uint64) (*backoff.Backoff, error) {

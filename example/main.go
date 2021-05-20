@@ -1,17 +1,18 @@
 package main
 
 import (
-	"github.com/chaseisabelle/backoff"
-	"github.com/chaseisabelle/backoff/expbo"
-	"github.com/chaseisabelle/backoff/linbo"
 	"time"
+
+	"github.com/vestiaire-collective/backoff"
+	"github.com/vestiaire-collective/backoff/expbo"
+	"github.com/vestiaire-collective/backoff/linbo"
 )
 
 func main() {
-	initial := uint64(1000) //<< start at 1 sec (1000ms)
+	initial := uint64(1000)  //<< start at 1 sec (1000ms)
 	max := uint64(1000 * 10) //<< cap it at 10 seconds
-	exp := uint64(2) //<< exponent
-	inc := uint64(1000) //<< increment 1 second
+	exp := uint64(2)         //<< exponent
+	inc := uint64(1000)      //<< increment 1 second
 
 	expBO, err := expbo.New(initial, max, exp)
 
